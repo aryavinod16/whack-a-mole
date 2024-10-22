@@ -1,0 +1,146 @@
+body {
+  background-color: #564592;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  color: #EDF67D;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+#startButton,
+#endButton {
+  margin-bottom: 20px;
+  padding: 15px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #ca7df9;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#endButton {
+  margin-left: 20px;
+}
+
+#startButton:hover,
+#endButton:hover {
+  background-color: #724cf9;
+}
+
+#startButton:disabled,
+#endButton:disabled {
+  background-color: #a6a6a6;
+  cursor: not-allowed;
+}
+
+.game-container {
+  background-color: #f896d8;
+  display: grid;
+  grid-template-columns: repeat(3, 155px);
+  gap: 10px;
+  border: 2px solid #564592;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.hole {
+  height: 150px;
+  background: #edf67d;
+  border: 5px solid #564592;
+  cursor: pointer;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mole {
+  background-size: 150px;
+  background-image: url("./mousepic.png");
+  transition: opacity 0.5s ease-out;
+  opacity: 1;
+}
+
+#muteButton {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+  margin-left: 10px;
+}
+
+#muteButton i {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+#muteButton:hover i {
+  color: #000;
+}
+
+@media only screen and (max-width: 600px) {
+  .game-container {
+    width: 90%;
+    gap: 10px;
+    padding: 5%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hole {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+  }
+
+  .mole {
+    background-size: 50px;
+    background-image: url("./mousepic.png");
+  }
+
+  #startButton,
+  #endButton {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .game-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #score,
+  #timer {
+    font-size: 18px;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  .game-container {
+    grid-template-columns: repeat(3, 180px);
+  }
+
+  .hole {
+    height: 180px;
+  }
+
+  .mole {
+    background-size: 180px;
+  }
+}
