@@ -20,11 +20,12 @@ body {
   margin: 20px;
 }
 
+
 #startButton,
 #endButton {
   margin-bottom: 20px;
   padding: 15px 25px;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
   border: none;
   background-color: #ca7df9;
@@ -54,7 +55,7 @@ body {
   grid-template-columns: repeat(3, 155px);
   gap: 10px;
   border: 2px solid #564592;
-  padding: 10px;
+  padding: 5px;
   border-radius: 10px;
 }
 
@@ -70,8 +71,10 @@ body {
 }
 
 .mole {
+  background-image: url("./moleimg.png");
   background-size: 150px;
-  background-image: url("./mousepic.png");
+  background-repeat: no-repeat; 
+  background-position: center;  
   transition: opacity 0.5s ease-out;
   opacity: 1;
 }
@@ -110,7 +113,7 @@ body {
 
   .mole {
     background-size: 50px;
-    background-image: url("./mousepic.png");
+    background-image: url("./moleimg.png");
   }
 
   #startButton,
@@ -127,7 +130,9 @@ body {
   #score,
   #timer {
     font-size: 18px;
+  
   }
+
 }
 
 
